@@ -53,5 +53,5 @@ RUN apk add --no-cache \
 COPY cmd/*.sh /usr/local/bin/
 RUN chmod +rx "$CMD_START" $CMD_ENTRY
 
-ENTRYPOINT ["/usr/local/bin/docker-entrypoint.sh"]
-CMD ["$CMD_START"]
+#ENTRYPOINT ["/usr/local/bin/docker-entrypoint.sh"]
+CMD ["/usr/local/bin/start.sh"]
